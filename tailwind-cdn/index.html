@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+   
+  
+      #currentImage{
+        height: 400px;
+        width: 1500px;
+     
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto Condensed", sans - serif],
+            },
+          },
+        },
+        plugins: [],
+      };
+    </script>
+  </head>
+  <body class="bg-black scroll-smooth">
+    <nav class="flex bg-slate-800 w-full justify-between h-14">
+      <div class="pl-2">
+        <img src="./assets/logoGalaxy.jpg" alt="" class="w-11 p-2 bg-clip-text pt-4">
+      </div>
+      <ul
+        class="flex gap-2 mr-8 text-xl font-roboto text-white m-auto cursor-pointer"
+      >
+        <!-- pencarian -->
+        <div class="relative">
+         
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <input type="text" placeholder="Search" class="rounded-lg" />
+        </div>
+        <li class="hover:bg-slate-500 hover:rounded-md px-4"><a href="#" class="no-underline ">Home</a></li>
+        <li class="hover:bg-slate-500 hover:rounded-md px-4"><a href="#Gallery" class="no-underline">Galery</a></li>
+        <li class="hover:bg-slate-500 hover:rounded-md px-4"><a href="#planet" class="no-underline">Planet</a></li>
+      </ul>
+    </nav>
+    <!-- bgian hero section -->
+
+    <div class=" flex gap-4 h-screen bg-no-repeat"style="background-image: url(./assets/luarAngkasa.jpg)">
+      <div class="text-xl font-serif p-7 w-1/2 pt-32 pl-20">
+        <h1 class=" text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text font-bold"  >Astronomi</h1>
+        <p class="mt-5 text-white text-2xl">
+         Yuk jelajahi luar angkasa bersama - sama, dan mempelajari apa aja sih Planet - planet yang ada pada galaxy Bimasakti kita ini. Dengan begitu, kamu dapat memperluas wawasan secara Astronom
+        </p>
+        <button
+          class="bg-blue-400 mt-10 rounded-lg p-3 hover:bg-blue-200 hover:text-white hover:border-slate-900 "
+        >
+          Lebih Lanjut
+        </button>
+      </div>
+      <div>
+                <img
+          src="./assets/Removal-7.png"
+          alt="gamabr"
+          class="rounded-lg translate-x-20 bg-clip-content text-transparent"
+        />
+      </div>
+    </div>
+
+    <!-- bagian galery -->
+    <span id="Gallery"
+      class=" upppercase m-auto block text-5xl font-serif font-bold p-20  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text"
+      >Gallery</span
+    >
+    <!-- bagian card -->
+    <div class="flex gap-2 columns-3 pt-4">
+      <section
+        class="shadow-2xl w-1/4 overflow-hidden rounded-lg p-4 m-auto border-solid border-2 border-sky-500"
+      >
+        <div class="border-solid">
+          <img
+            src="./assets/tailwind.png"
+            alt=""
+            class="pb-5"
+          />
+          <p class="pb-8 text-cyan-400">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
+            alias animi modi officiis corporis expedita.
+          </p>
+        </div>
+      </section>
+      <section
+        class=" shadow-2xl w-1/4 overflow-hidden rounded-lg p-4 border-solid border-2 border-sky-500"
+      >
+        <div class="border-solid">
+          <img
+            src="./assets/html.jpg"
+            alt=""
+            class="pb-5"
+          />
+          <p class="pb-8 text-cyan-400">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
+            alias animi modi officiis corporis expedita.
+          </p>
+        </div>
+      </section>
+      <section
+        class="m-auto shadow-2xl w-1/4 overflow-hidden rounded-lg p-4 border-solid border-2 border-sky-500"
+      >
+        <div class="border-solid">
+          <img
+            src="./assets/js.png"
+            alt=""
+            class="pb-5"
+          />
+          <p class="pb-8 text-cyan-400">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
+            alias animi modi officiis corporis expedita.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- bagian list galaxy -->
+    <h1 class="text-center  text-6xl font-bold pt-32 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text" id="planet">Planetarium</h1>
+      <div class=" relative flex pt-10">
+    <div id="imageContainer" class="order-2">
+      <img id="currentImage" src="./assets//Markurius.png" alt="Current Image" class=" ">
+      <button id="nextButton" class="absolute top-1/2 right-4 transform -translate-y-1/2 px-4 py-2 bg-blue-500 text-white rounded">Next</button>
+    </div>
+    
+    <div class="mt-4 ">
+      <h2 id="imageTitle" class="font-bold text-white mx-auto pl-28 pt-14 text-5xl pb-5 uppercase">Title</h2>
+      <p id="imageDetail" class="text-gray-600 pl-28 text-3xl">Detail</p>
+    </div>
+  </div>
+
+
+  <footer class="pt-52">
+    <ul class="grid no-underline text-white gap-4 bg-gradient-to-r from-slate-500 via-blue-500 to-pink-500 grid-cols-3 p-10 text-xl font-semibold">
+      <li><a href="">contact</a></li>
+      <li><a href="">Service</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Motivation</a></li>
+      <li><a href="">Location</a></li>
+      <li><a href="">Email</a></li>
+    </ul>
+  </footer>
+<script src="index.js"></script>
+
+
+  </body>
+</html>
